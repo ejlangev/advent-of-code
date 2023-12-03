@@ -32,7 +32,6 @@ with {:ok, contents} <- File.read('input.txt') do
   }))
   |> Enum.sum
   |> IO.inspect(label: "Part 2")
-
 else
   _ -> IO.inspect("Failed to read input file!")
 end
