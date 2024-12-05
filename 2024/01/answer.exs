@@ -17,7 +17,7 @@ defmodule AdventOfCode do
   end
 end
 
-with {:ok, contents} <- File.read('input.txt') do
+with {:ok, contents} <- File.read("input.txt") do
   String.split(contents, "\n", trim: true)
   |> Enum.reduce({[], []}, fn line, {left, right} ->
     String.split(line, " ", trim: true)

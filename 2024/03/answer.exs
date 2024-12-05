@@ -4,11 +4,6 @@ defmodule AdventOfCode do
     build_mul_values(contents)
     |> Enum.map(fn {l, r, _} -> l * r end)
     |> Enum.sum
-    # Regex.scan(~r/mul\((\d{1,3}),(\d{1,3})\)/, contents, capture: :all_but_first)
-    # |> Enum.map(fn [a, b] ->
-    #   String.to_integer(a) * String.to_integer(b)
-    # end)
-    # |> Enum.sum
   end
 
   @spec solve_part_two(String.t()) :: Integer.t()
@@ -47,7 +42,7 @@ defmodule AdventOfCode do
 end
 
 
-with {:ok, contents} <- File.read('input.txt') do
+with {:ok, contents} <- File.read("input.txt") do
   AdventOfCode.solve_part_one(contents) |> IO.inspect(label: "Part 1")
   AdventOfCode.solve_part_two(contents) |> IO.inspect(label: "Part 2")
 else

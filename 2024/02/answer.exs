@@ -46,7 +46,7 @@ defmodule AdventOfCode do
 end
 
 
-with {:ok, contents} <- File.read('input.txt') do
+with {:ok, contents} <- File.read("input.txt") do
   AdventOfCode.parse_input(contents)
   |> tap(fn input ->
     AdventOfCode.solve_part_one(input) |> IO.inspect(label: "Part 1")
